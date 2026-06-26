@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: CHEMMASTER",
+  "description": "Aplikasi Pembelajaran Kimia Interaktif SMA Kelas X–XII dengan 10 model pembelajaran futuristik.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --wp-primary: #2271b1;
+  --wp-primary-dark: #135e96;
+  --bg-gradient: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  --accent-color: rgba(34, 113, 177, 0.2);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --sidebar-bg: #1e1e1e;
+  --content-bg: #ffffff;
+  --text-main: #1e1e1e;
+}
+
+.theme-eduverse {
+  --wp-primary: #06b6d4;
+  --wp-primary-dark: #0891b2;
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  --accent-color: rgba(6, 182, 212, 0.2);
+  --header-bg: rgba(15, 23, 42, 0.8);
+  --text-main: #f8fafc;
+}
+
+.theme-mindforge {
+  --wp-primary: #6366f1;
+  --wp-primary-dark: #4f46e5;
+  --bg-gradient: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  --accent-color: rgba(99, 102, 241, 0.2);
+  --header-bg: rgba(30, 41, 59, 0.8);
+  --text-main: #f8fafc;
+}
+
+.theme-chemplay {
+  --wp-primary: #10b981;
+  --wp-primary-dark: #059669;
+  --bg-gradient: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+  --accent-color: rgba(16, 185, 129, 0.2);
+  --header-bg: rgba(6, 78, 59, 0.8);
+  --text-main: #f8fafc;
+}
+
+.theme-zenlife {
+  --wp-primary: #84a59d;
+  --wp-primary-dark: #6b8e85;
+  --bg-gradient: linear-gradient(135deg, #f7ede2 0%, #f5cac3 100%);
+  --accent-color: rgba(132, 165, 157, 0.2);
+  --header-bg: rgba(247, 237, 226, 0.8);
+  --text-main: #1e1e1e;
+}
+
+.theme-skillblast {
+  --wp-primary: #f59e0b;
+  --wp-primary-dark: #d97706;
+  --bg-gradient: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  --accent-color: rgba(245, 158, 11, 0.2);
+  --header-bg: rgba(17, 24, 39, 0.8);
+  --text-main: #f8fafc;
+}
+
+.theme-fitai {
+  --wp-primary: #ef4444;
+  --wp-primary-dark: #dc2626;
+  --bg-gradient: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  --accent-color: rgba(239, 68, 68, 0.2);
+  --header-bg: rgba(0, 0, 0, 0.8);
+  --text-main: #f8fafc;
+}
+
+.theme-finguard {
+  --wp-primary: #1e3a8a;
+  --wp-primary-dark: #1e40af;
+  --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  --accent-color: rgba(30, 58, 138, 0.2);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --text-main: #1e1e1e;
+}
+
+.theme-cinecraft {
+  --wp-primary: #e11d48;
+  --wp-primary-dark: #be123c;
+  --bg-gradient: linear-gradient(135deg, #0c0a09 0%, #1c1917 100%);
+  --accent-color: rgba(225, 29, 72, 0.2);
+  --header-bg: rgba(12, 10, 9, 0.8);
+  --text-main: #f8fafc;
+}
+
+.theme-homesync {
+  --wp-primary: #3b82f6;
+  --wp-primary-dark: #2563eb;
+  --bg-gradient: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  --accent-color: rgba(59, 130, 246, 0.2);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --text-main: #1e1e1e;
+}
+
+.theme-culturemap {
+  --wp-primary: #c2410c;
+  --wp-primary-dark: #9a3412;
+  --bg-gradient: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  --accent-color: rgba(194, 65, 12, 0.2);
+  --header-bg: rgba(255, 247, 237, 0.8);
+  --text-main: #1e1e1e;
+}
+
+/* 3D Balloon Title Style */
+.balloon-title {
+  display: inline-block;
+  padding: 12px 28px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 
+    0 8px 0 rgba(0,0,0,0.15),
+    inset 0 -4px 8px rgba(0,0,0,0.1),
+    0 12px 20px rgba(0,0,0,0.1);
+  transform: perspective(1000px) rotateX(5deg);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #000;
+  color: #1e1e1e;
+}
+
+.balloon-title:hover {
+  transform: perspective(1000px) rotateX(0deg) translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 12px 0 rgba(0,0,0,0.2),
+    inset 0 -4px 8px rgba(0,0,0,0.1),
+    0 18px 25px rgba(0,0,0,0.15);
+}
+
+/* 3D Colorful Card Style */
+.card-3d {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  position: relative;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  color: #1e1e1e;
+}
+
+.card-3d:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #000;
+}
+
+.card-3d-blue { border-color: #3b82f6; box-shadow: 6px 6px 0 #3b82f6; }
+.card-3d-blue:hover { box-shadow: 10px 10px 0 #3b82f6; }
+
+.card-3d-green { border-color: #10b981; box-shadow: 6px 6px 0 #10b981; }
+.card-3d-green:hover { box-shadow: 10px 10px 0 #10b981; }
+
+.card-3d-purple { border-color: #8b5cf6; box-shadow: 6px 6px 0 #8b5cf6; }
+.card-3d-purple:hover { box-shadow: 10px 10px 0 #8b5cf6; }
+
+.card-3d-orange { border-color: #f59e0b; box-shadow: 6px 6px 0 #f59e0b; }
+.card-3d-orange:hover { box-shadow: 10px 10px 0 #f59e0b; }
+
+.card-3d-red { border-color: #ef4444; box-shadow: 6px 6px 0 #ef4444; }
+.card-3d-red:hover { box-shadow: 10px 10px 0 #ef4444; }
+
+.card-3d-pink { border-color: #ec4899; box-shadow: 6px 6px 0 #ec4899; }
+.card-3d-pink:hover { box-shadow: 10px 10px 0 #ec4899; }
+
+.card-3d-yellow { border-color: #eab308; box-shadow: 6px 6px 0 #eab308; }
+.card-3d-yellow:hover { box-shadow: 10px 10px 0 #eab308; }
+
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+}
+
+.wp-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.wp-sidebar-item {
+  transition: all 0.1s ease-in-out;
+}
+
+.wp-sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #72aee6;
+}
+
+.wp-sidebar-item.active {
+  background: var(--wp-primary);
+  color: white;
+}
+
+.wp-button-primary {
+  background-color: var(--wp-primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.wp-button-primary:hover {
+  background-color: var(--wp-primary-dark);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Manual Prose Styles */
+.prose h1 { 
+  @apply text-3xl mb-8 block w-fit;
+  display: inline-block;
+  padding: 12px 28px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.15), inset 0 -4px 8px rgba(0,0,0,0.1), 0 12px 20px rgba(0,0,0,0.1);
+  transform: perspective(1000px) rotateX(5deg);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #000;
+  color: #1e1e1e;
+}
+.prose h2 { 
+  @apply text-2xl mb-6 mt-10 block w-fit;
+  display: inline-block;
+  padding: 12px 28px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.15), inset 0 -4px 8px rgba(0,0,0,0.1), 0 12px 20px rgba(0,0,0,0.1);
+  transform: perspective(1000px) rotateX(5deg);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #000;
+  color: #1e1e1e;
+}
+.prose h3 { @apply text-xl font-black text-slate-900 mb-4 mt-8; }
+.prose p { @apply mb-4 leading-relaxed; }
+.prose ul, .prose ol { @apply mb-6 ml-6 space-y-2; }
+.prose li { @apply list-disc font-black text-slate-800; }
+.prose strong { @apply text-blue-600 font-black; }
+.prose hr { @apply my-10 border-t-4 border-black/10; }
+.prose blockquote { @apply border-l-8 border-yellow-400 pl-6 py-2 my-8 bg-yellow-50 rounded-r-2xl font-black italic text-slate-700; }
+.prose table { @apply w-full border-collapse border-4 border-black my-8 overflow-hidden rounded-xl; }
+.prose th { @apply bg-slate-100 border-2 border-black p-4 text-left font-black uppercase tracking-widest text-xs; }
+.prose td { @apply border-2 border-black p-4 text-sm font-black text-slate-800; }
+.prose tr:nth-child(even) { @apply bg-slate-50; }
+
+/* Perspective & Flip Effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Flipbook Custom Styling */
+.stf__parent {
+  background-color: transparent !important;
+}
+
+.stf__block {
+  background-color: white;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
